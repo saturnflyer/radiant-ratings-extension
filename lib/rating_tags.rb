@@ -39,7 +39,7 @@ module RatingTags
   end
   
   tag 'rating:points:each:if_average_greater' do |tag|
-    tag.expand if tag.locals.rating > tag.locals.point_value * 0.8
+    tag.expand if tag.locals.rating >= tag.locals.point_value
   end
   
   tag 'rating:points:each:if_average_less' do |tag|
